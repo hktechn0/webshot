@@ -140,13 +140,13 @@ echo "<p>
 URL: ${URL}<br>
 Size: ${SIZES}<br>"
 
-echo "waiting...\r"
+echo "waiting...<br>"
 
 # log
 log_output "$REMOTE_ADDR" "SHOT" "$URL" "$SIZE"
 
 # shot!
-$TITLE=`bash webshot.sh "$URL" "$SIZE" 2> /dev/null`
+TITLE="`bash webshot.sh "$URL" "$SIZE" 2> /dev/null`"
 EXIT_STAT=$?
 
 echo "Title: ${TITLE}

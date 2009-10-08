@@ -63,7 +63,7 @@ MBAR="24"
 SBAR="16"
 
 # resize delay
-DELAY="5"
+DELAY="10"
 # capture delay
 CAP_DELAY="3"
 # firefox close delay
