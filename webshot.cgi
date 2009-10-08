@@ -3,7 +3,7 @@
 ############################################
 ##
 ## webshot.cgi
-## - Version 1.27
+## - Version 1.30
 ##
 ## Webpage Capture Script Wrapper for CGI
 ## Work with firefox + wmctrl

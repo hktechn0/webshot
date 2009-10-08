@@ -3,7 +3,7 @@
 ############################################
 ##
 ## webshot.sh
-## - Version 1.27
+## - Version 1.30
 ##
 ## Webpage Capture Script for bash
 ## Works with firefox + wmctrl

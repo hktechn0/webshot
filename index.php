@@ -55,6 +55,10 @@
     </p>
     
     <h3>Changes</h3>
+    <p>Changes in v1.30 (09/10/09)</p>
+    <ul>
+      <li>split config file</li>
+    </ul>
     <p>Changes in v1.27 (09/10/08)</p>
     <ul>
       <li>bug fix</li>
@@ -73,8 +77,8 @@
       <li>bug fix</li>
     </ul>
     
-    <p>webshot-v1.27</p>
+    <p>webshot-v1.30</p>
     <hr>
-    <p>Hosted by <a href="http://techno-st.net/">techno [techno-st.net]</a></p>
+    <p><a href="http://hogehoge/">hogehogehoge</a></p>
   </body>
 </html>
