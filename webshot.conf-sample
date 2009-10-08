@@ -5,27 +5,30 @@ SITE="http://hogehoge/"
 # Form URL
 FORM="http://hogehoge/"
 
-# log file
-LOGFILE="hogehoge/logs/webshot_log"
-# lock file
-LOCKFILE="hogehoge/lock/lockfile"
-# count file
-CNT_LOG="./cnt_log"
-
-# image output dir and file
+# image output dir and filename-head
+# (you should mkdir)
 OUTDIR="tmp/screen"
 IMGDIR="img/webshot"
+
+# log file
+# (you should mkdir)
+LOGFILE="pathto/logs/webshot_log"
+
+# lock file
+LOCKFILE="./lockfile"
+# count file
+CNT_LOG="./cnt_log"
 
 # escape and decode script
 ESC_SCR="escape.sed"
 DEC_SCR="decode.sed"
 
-# Header
+# HTML Header
 HEADER="<html>
 <head><title>webshot</title></head>
 <body>"
 
-# Footer
+# HTML Footer
 FOOTER="<hr>
 <a href=\"${SITE}\">HOME</a>
 </body>
@@ -42,17 +45,17 @@ export LANG="ja_JP.UTF-8"
 
 # Firefox profile
 PROFILE="webshot"
+
 # Firefox Name
 #FIREFOX="Mozilla Firefox"
 FIREFOX="Iceweasel"
+
 # Firefox Process Name
 FIREFOXBIN="firefox-bin"
 #FIREFOXBIN="firefox"
 
 # thumbnail width
 THUMB_W="160"
-# image output dir and file
-OUTDIR="tmp/screen"
 
 ## Firefox MenuBar Height
 MBAR="24"
