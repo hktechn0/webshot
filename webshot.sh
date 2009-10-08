@@ -13,42 +13,7 @@
 ##
 ###########################################
 
-#################### config ####################
-
-# resize delay
-DELAY="5"
-# capture delay
-CAP_DELAY="3"
-# firefox close delay
-CLOSE_DELAY="1"
-
-## Firefox MenuBar Height
-MBAR="24"
-## Firefox ScrollBar Size
-SBAR="16"
-
-# Firefox profile
-PROFILE="webshot"
-# Firefox Name
-#FIREFOX="Mozilla Firefox"
-FIREFOX="Iceweasel"
-# Firefox Process Name
-FIREFOXBIN="firefox-bin"
-#FIREFOXBIN="firefox"
-
-# thumbnail width
-THUMB_W="160"
-# image output dir and file
-OUTDIR="tmp/screen"
-
-# display
-export DISPLAY=":0"
-# homedir
-export HOME="/home/hogehoge"
-# lang
-export LANG="ja_JP.UTF-8"
-
-##################################################
+. webshot.conf
 
 function id_chk()
 {
@@ -101,7 +66,7 @@ fi
 # window id, title get
 WINID=`echo "$WINFO" | cut -f 1 -d ' '`
 TITLE=`echo "$WINFO" | cut -c 15- | cut -f 2- -d ' ' | sed -e "s/ - ${FIREFOX}//g"`
-echo "TITLE -> $TITLE"
+echo "$TITLE"
 
 # if size
 if [ $SIZE -eq 1 ]
@@ -123,15 +88,12 @@ else
 fi
 
 # resize-after-resize
-resize $X $[$Y + $MBAR]							# resize to y += menubar
+resize $X $[$Y + $MBAR]                    # resize to y += menubar
 XINF=`xwininfo -tree -id $WINID`
-CID1=`id_chk $[$X - $SBAR] $[$Y - $SBAR]`		# scrollbar enalbe both
-CID2=`id_chk ${X} $[$Y - $SBAR]`				# scrollbar enable y-axis
-CID3=`id_chk $[$X - $SBAR] ${Y}`				# scrollbar enable x-axis
-CID4=`id_chk ${X} ${Y}`							# no scrollbar
-#CID5=`id_chk $[$X - $SBAR] $[$Y - $SBAR - 1]`	# scrollbar enable both (debug
-
-echo "$URL 1:$CID1 2:$CID2 3:$CID3 4:$CID4 5:$CID5" > logs/debug
+CID1=`id_chk $[$X - $SBAR] $[$Y - $SBAR]`  # scrollbar enalbe both
+CID2=`id_chk ${X} $[$Y - $SBAR]`           # scrollbar enable y-axis
+CID3=`id_chk $[$X - $SBAR] ${Y}`           # scrollbar enable x-axis
+CID4=`id_chk ${X} ${Y}`                    # no scrollbar
 
 if [ -n "$CID1" ]
 then
