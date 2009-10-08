@@ -1,0 +1,36 @@
+############################################################
+##
+## Webshot
+## - Version 1.27
+##
+## Created by techno @ Hirotaka Kawata
+## - http://www.techno-st.net/wiki/
+##
+############################################################
+
+require:
+- X
+- wmctrl
+- (wmctrl supports) window manager
+-- fluxbox
+-- GNOME
+-- KDE
+-- etc...
+- Firefox (or Iceweasel)
+- ImageMagick
+- bash
+
+Setup:
+- config your Firefox
+- config webshot.cgi
+- config webshot.sh
+#- config index.php
+
+Let's use:
+http://hogehoge/webshot.cgi?url="URL"&s="sizeid"
+URL	= http://hogehoge/
+sizeid	= 1: vga (640x480)
+	  2: svga (800x600)
+	  3: xga  (1024x768)
+
+Using at your own risk.
